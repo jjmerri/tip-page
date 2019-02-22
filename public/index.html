@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Tip Page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link href="tips.css" rel="stylesheet">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  </head>
+
+  <body>
+
+    <header>
+      <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <i class="fab fa-bitcoin fa-fw"></i>
+            <span>Tip Page</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main role="main">
+
+      <div class="page-header text-center p-3">
+		<h1>Thank You For Your Support!</h1>
+	  </div>
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="./wallet_qr_codes/XRP.png" alt="Card image cap">
+                <div class="card-body">
+                  <span id="xrpAddress" class="card-text">rNd5z8VmzHb4u3pKHY6mBQRamBBW37iMna</span> <button class="btn" onclick="copyAddress('xrpAddress')"><i class="far fa-copy"></i></button>
+                </div>
+              </div>
+            </div>
+			
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="./wallet_qr_codes/Bitcoin.png" alt="Card image cap">
+                <div class="card-body">
+                  <span id="bitcoinAddress" class="card-text">bc1q533ty9dmljscp9w2hsw7cv6hhena4kfu3ny3rg</span> <button class="btn" onclick="copyAddress('bitcoinAddress')"><i class="far fa-copy"></i></button>
+                </div>
+              </div>
+            </div>
+			
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="./wallet_qr_codes/Ethereum.png" alt="Card image cap">
+                <div class="card-body">
+                  <span id="ethereumAddress" class="card-text">0xB583072b4407956Ff57E62541c68dAA8aFCAF836</span> <button class="btn" onclick="copyAddress('ethereumAddress')"><i class="far fa-copy"></i></button>
+                </div>
+              </div>
+            </div>
+			
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="./wallet_qr_codes/BitcoinCash.png" alt="Card image cap">
+                <div class="card-body">
+                  <span id="bchAddress" class="card-text">qqlg7pr9dmuyy3g9wn3gd2ahndl7zhrruq28p409py</span> <button class="btn" onclick="copyAddress('bchAddress')"><i class="far fa-copy"></i></button>
+                </div>
+              </div>
+            </div>
+			
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="./wallet_qr_codes/Litecoin.png" alt="Card image cap">
+                <div class="card-body">
+                  <span id="litecoinAddress" class="card-text">ltc1qzjwsz4cfqz9yn7alnwjtcyz7t6ejchx9refp20</span> <button class="btn" onclick="copyAddress('litecoinAddress')"><i class="far fa-copy"></i></button>
+                </div>
+              </div>
+            </div>
+			
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" src="./wallet_qr_codes/Dash.png" alt="Card image cap">
+                <div class="card-body">
+                  <span id="dashAddress" class="card-text">XkUkfvvy1YiEcWHhxyNXd2MYyqau768x6J</span> <button class="btn" onclick="copyAddress('dashAddress')"><i class="far fa-copy"></i></button>
+                </div>
+              </div>
+            </div>
+			
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="text-muted">
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Contact</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <i class="fas fa-envelope mr-3"></i> <a href="mailto:BlobWare42@gmail.com">BlobWare42@gmail.com</a></p>
+          <p>
+            <i class="fab fa-reddit mr-3"></i> <a href="https://www.reddit.com/message/compose/?to=BoyAndHisBlob">PM BoyAndHisBlob</a></p>
+
+        </div>
+    </footer>
+
+	<script>
+		function copyAddress(elementName) {
+			var copyText = document.getElementById(elementName);
+			var textArea = document.createElement("textarea");
+			textArea.value = copyText.textContent;
+			document.body.appendChild(textArea);
+			textArea.select();
+			document.execCommand("Copy");
+			textArea.remove();
+		}
+	</script>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
